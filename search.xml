@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Chinese Ring Puzzle</title>
+      <link href="/2020/06/24/jiu-lian-huan/"/>
+      <url>/2020/06/24/jiu-lian-huan/</url>
+      
+        <content type="html"><![CDATA[<h2 id="这里是一些规则"><a href="#这里是一些规则" class="headerlink" title="这里是一些规则:"></a>这里是一些规则:</h2><ol><li><p>直接下第一环或者第二环或者两者皆下</p></li><li><p>想要下第n环必须保证第n-1环在上，而前n-2环在下</p></li><li><p>上环过程为1、2过程的逆过程 </p><h2 id="以下是用Java语言实现的代码"><a href="#以下是用Java语言实现的代码" class="headerlink" title="以下是用Java语言实现的代码"></a>以下是用Java语言实现的代码</h2></li></ol><pre class=" language-Java"><code class="language-Java">import java.util.Scanner;public class NineChainOfRings {    public static void main(String[] args) {        Scanner input = new Scanner(System.in);        System.out.print("请输入环的个数：");        int numberOfRings = input.nextInt();        ringDown(numberOfRings);        System.out.println("总共所需步数："+count);    }        static int count = 0;    public static void ringDown(int n){        if(n > 2){            //想要下第n环必须先下前n-2环            ringDown(n - 2);        }        if(n == 2){            //简化操作，直接下前一二环            System.out.println("前一二环一起下");        }else{            //第一步已下好前n-2环，故可下第n环            System.out.println("下第"+n+"环");        }        count++;        if(n > 2){            //想要下第n-1环，先上前n-2环            ringUp(n - 2);        }        if(n > 2){            //问题从下载前n环变为下载前n-1环            //继续递归            ringDown(n - 1);        }    }        /*上环实为下环的逆过程，        * 在此不再赘述，请读者        * 自行查看        * */    public static void ringUp(int n){            if(n > 2){                ringUp(n - 1);            }            if(n == 2){                System.out.println("前一二环一起上");            }else{                System.out.println("上第"+n+"环");            }        count++;        if(n >2){                ringDown(n - 2);            }            if(n > 2){                ringUp(n - 2);            }    }}</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> Recursion </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>how to install graphviz</title>
       <link href="/2020/06/16/graphviz-install/"/>
       <url>/2020/06/16/graphviz-install/</url>

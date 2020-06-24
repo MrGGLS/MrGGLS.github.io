@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="how to install graphviz, Hexo">
-    <meta name="description" content="I have tried a lot of methods and finally got this :)">
+    <meta name="keywords" content="Chinese Ring Puzzle, Hexo">
+    <meta name="description" content="Chinese ring puzzle is one kind of complex game and quite difficult to understand, I spent one more hours in solving this issue, and I also made a program which might have some help for you.">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>how to install graphviz | Hexo</title>
+    <title>Chinese Ring Puzzle | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +303,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">how to install graphviz</h1>
+                    <h1 class="description center-align post-title">Chinese Ring Puzzle</h1>
                 </div>
             </div>
         </div>
@@ -328,9 +328,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -338,8 +342,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/MachineLearning/" class="post-category">
-                                MachineLearning
+                            <a href="/categories/Recursion/" class="post-category">
+                                Recursion
                             </a>
                         
                     </div>
@@ -351,7 +355,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-16
+                    2020-06-24
                 </div>
                 
 
@@ -368,10 +372,85 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Here-is-the-answer"><a href="#Here-is-the-answer" class="headerlink" title="Here is the answer:"></a>Here is the answer:</h1><pre><code>1. open your anaconda prompt
- 2. input: 
- + conda install -c anaconda graphviz python-graphviz
- 3. it works for me and I believe it will do the same for you too</code></pre>
+                <h2 id="这里是一些规则"><a href="#这里是一些规则" class="headerlink" title="这里是一些规则:"></a>这里是一些规则:</h2><ol>
+<li><p>直接下第一环或者第二环或者两者皆下</p>
+</li>
+<li><p>想要下第n环必须保证第n-1环在上，而前n-2环在下</p>
+</li>
+<li><p>上环过程为1、2过程的逆过程 </p>
+<h2 id="以下是用Java语言实现的代码"><a href="#以下是用Java语言实现的代码" class="headerlink" title="以下是用Java语言实现的代码"></a>以下是用Java语言实现的代码</h2></li>
+</ol>
+<pre class=" language-Java"><code class="language-Java">import java.util.Scanner;
+
+public class NineChainOfRings {
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("请输入环的个数：");
+        int numberOfRings = input.nextInt();
+        ringDown(numberOfRings);
+        System.out.println("总共所需步数："+count);
+
+    }
+
+        static int count = 0;
+    public static void ringDown(int n){
+
+        if(n > 2){
+            //想要下第n环必须先下前n-2环
+            ringDown(n - 2);
+        }
+
+        if(n == 2){
+            //简化操作，直接下前一二环
+            System.out.println("前一二环一起下");
+        }else{
+            //第一步已下好前n-2环，故可下第n环
+            System.out.println("下第"+n+"环");
+        }
+        count++;
+
+        if(n > 2){
+            //想要下第n-1环，先上前n-2环
+            ringUp(n - 2);
+        }
+
+        if(n > 2){
+            //问题从下载前n环变为下载前n-1环
+            //继续递归
+            ringDown(n - 1);
+        }
+
+    }
+        /*上环实为下环的逆过程，
+        * 在此不再赘述，请读者
+        * 自行查看
+        * */
+    public static void ringUp(int n){
+
+            if(n > 2){
+                ringUp(n - 1);
+            }
+
+            if(n == 2){
+                System.out.println("前一二环一起上");
+            }else{
+                System.out.println("上第"+n+"环");
+            }
+        count++;
+
+        if(n >2){
+                ringDown(n - 2);
+            }
+
+            if(n > 2){
+                ringUp(n - 2);
+            }
+
+    }
+
+}</code></pre>
+
             </div>
             <hr/>
 
@@ -396,7 +475,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://MrGGLS.github.io/2020/06/16/graphviz-install/">https://MrGGLS.github.io/2020/06/16/graphviz-install/</a>
+                    <a href="https://MrGGLS.github.io/2020/06/24/jiu-lian-huan/">https://MrGGLS.github.io/2020/06/24/jiu-lian-huan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -433,7 +512,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -597,9 +680,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/06/24/jiu-lian-huan/">
                     <div class="card-image">
@@ -617,9 +701,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -632,6 +716,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -650,31 +735,31 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/24/mysql-ji-chu-zhi-ling-bi-ji/">
+                <a href="/2020/06/16/graphviz-install/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="mysql基础笔记">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="how to install graphviz">
                         
-                        <span class="card-title">mysql基础笔记</span>
+                        <span class="card-title">how to install graphviz</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            This is my second blog. As you can see, I'm learning something about databases, and my notes about MYSQL are as follow
+                            I have tried a lot of methods and finally got this :)
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-16
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/MySQL/" class="post-category">
-                                    MySQL
+                            <a href="/categories/MachineLearning/" class="post-category">
+                                    MachineLearning
                                 </a>
                             
                             
