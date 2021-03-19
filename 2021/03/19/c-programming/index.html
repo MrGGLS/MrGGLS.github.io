@@ -4,8 +4,9 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="C++ Programming, Hexo">
+    <meta name="description" content="C++ ProgrammingTypes
+Every name (identifier) in a C++ program has a type associated with it. This type determines what o">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>Hello World | Hexo</title>
+    <title>C++ Programming | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -303,12 +304,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">C++ Programming</h1>
                 </div>
             </div>
         </div>
@@ -437,7 +438,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-02-17
+                    2021-03-19
                 </div>
                 
 
@@ -454,15 +455,347 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+                <h1 id="C-Programming"><a href="#C-Programming" class="headerlink" title="C++ Programming"></a>C++ Programming</h1><h2 id="Types"><a href="#Types" class="headerlink" title="Types"></a>Types</h2><ul>
+<li><p><strong>Every name (identifier) in a C++ program has a type associated with it</strong>. This type determines <u>what operations can be applied to the name</u> (that is, to the entity referred to by the name) and <u>how such operations are interpreted</u></p>
+<pre class=" language-c++"><code class="language-c++">float x;//x is a loating-point variable
+int y=7;//y is an integer variable with the initial value 7
+float f(int);//f is a function taking an argument of type int and returning a floating-point number</code></pre>
+<ul>
+<li>Identifiers (标识符)：如Variables (变量)、Constants（常量）、Functions（函数）等</li>
+<li>Literals（字面值）：如10，1.234，’A’，”Hello World”</li>
+<li>Operators（操作符/运算符）</li>
+<li>以上元素的合法组合，如Expression（表达式）等</li>
+<li><img src="images/image-20210319114328639.png" alt="image-20210319114328639"></li>
+<li><img src="images/image-20210319114410899.png" alt="image-20210319114410899"></li>
+</ul>
+</li>
+<li><p>一个类型可被看成由两个集合构成：</p>
+<ul>
+<li>值集：描述了该类型变量的合法取值范围</li>
+<li>操作集：描述了对值集中的元素能实施哪些运算</li>
+</ul>
+</li>
+<li><p>类型的作用：</p>
+<ul>
+<li>决定其变量/实例的合法取值范围——值集（the Set of Values）</li>
+<li>决定合法的操作（一般用操作符或函数表示）的范围——操作集（the Set of Operations）</li>
+<li>决定变量的存储空间大小</li>
+<li>区分名字相同、性质不同的符号，如变量、函数、操作符</li>
+<li>决定将一种类型的值<strong>能否</strong>及<strong>如何</strong>转换成另一种类型的值</li>
+<li><u>为编译程序提供依据，令其检查出程序中的一部分错误</u></li>
+</ul>
+</li>
+</ul>
+<h3 id="Booleans"><a href="#Booleans" class="headerlink" title="Booleans"></a>Booleans</h3><ul>
+<li><p>名称：bool</p>
+</li>
+<li><p>值集：{true, false}</p>
+</li>
+<li><p>支持的运算</p>
+<ul>
+<li>逻辑运算：非（!） 与（&amp;&amp;）或（||）</li>
+<li>算术运算：true和false可被替换成整数1和0</li>
+</ul>
+</li>
+<li><p>数值/指针类型可转换为bool：0 equals false, others equal true</p>
+</li>
+<li><p>examples:</p>
+<ul>
+<li>you can use bool as the result of some conditions</li>
+</ul>
+<pre class=" language-c++"><code class="language-c++">bool is_open(File*);
+bool greater(int a,int b){return a>b;}</code></pre>
+</li>
+</ul>
+<h3 id="Character-Types"><a href="#Character-Types" class="headerlink" title="Character Types"></a>Character Types</h3><ul>
+<li><p>C++ provides a variety of character types</p>
+<ul>
+<li><p><strong>char</strong>: The default character type, is usually 8 bits</p>
+<ul>
+<li><pre class=" language-c++"><code class="language-c++">char c = 255; // 255 is ‘‘all ones,’ ’ hexadecimal 0xFF
+int i = c;//if a char is signed, 255 means -1, but unsigned means 255</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>signed char</strong> : Like char, but guaranteed to be signed</p>
+</li>
+<li><p><strong>unsigned char</strong>: Like char, but guaranteed to be unsigned</p>
+</li>
+<li><p><strong>wchar_t</strong>: The size of it is <strong>implementation-defined</strong> (Provided for a larger character set such as unicode), is usually 2 bytes</p>
+</li>
+<li><p><strong>char16_t</strong>: A type for holding 16-bit character sets, such as UTF-16</p>
+</li>
+<li><p><strong>char32_t</strong>: A type for holding 32-bit character sets, such as UTF-32</p>
+</li>
+</ul>
+</li>
+<li><p>char类型字面值（literal）书写形式为<strong>一对单引号包围的</strong></p>
+<blockquote>
+<p>单个字符：’0’，’a’，’A’</p>
+<p>转义形式：’\n’, ‘\r’, ‘\t’ , ‘\b’, ‘\a’ , ‘\‘, ‘\‘’ , ‘\“‘</p>
+<p>十六进制形式：如’2’可表示为’\x32’</p>
+<p>八进制形式：如’2’可表示为’\062’</p>
+</blockquote>
+</li>
+<li><p><strong>A <u>char</u> must identically to either a <u>signed char</u> or an <u>unsinged char</u></strong>, you can’t mix pointers to different char types</p>
+<pre class=" language-c++"><code class="language-c++">oid f(char c, signed char sc, unsigned char uc)
+{
+char∗ pc = &uc; // error : no pointer conversion
+signed char∗ psc = pc; // error : no pointer conversion
+unsigned char∗ puc = pc; // error : no pointer conversion
+psc = puc; // error : no pointer conversion
+}</code></pre>
+</li>
+</ul>
+<h3 id="Integer-Types"><a href="#Integer-Types" class="headerlink" title="Integer Types"></a>Integer Types</h3><ul>
+<li><img src="images/image-20210319185002504.png" alt="image-20210319185002504"></li>
+<li><img src="images/image-20210319190301927.png" alt="image-20210319190301927"></li>
+</ul>
+<h3 id="Floating-Point-Types"><a href="#Floating-Point-Types" class="headerlink" title="Floating-Point Types"></a>Floating-Point Types</h3><ul>
+<li><p>There are three floating-point types: <strong>float (single-precision)</strong>, <strong>double (double-precision)</strong>, and <strong>long double (extended-precision)</strong></p>
+</li>
+<li><p>浮点数字面值的书写形式：</p>
+<blockquote>
+<p>整数部分.小数部分[e|E]$\pm$整数[f|F|L|l]</p>
+<p><strong>之间不能有空格</strong></p>
+<p>后缀为f或F为float，为l或L为long double，什么都不加为double</p>
+<ul>
+<li><p>some examples</p>
+<pre class=" language-c++"><code class="language-c++">1.23 0.23 1. 1.0 1.2e10 1.23e-15
+3.14159265f 2.0f 2.997925F 2.9e−3f    //float
+3.14159265L 2.0L 2.997925L 2.9e−3L    //double</code></pre>
+</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<h3 id="Sizes"><a href="#Sizes" class="headerlink" title="Sizes"></a>Sizes</h3><ul>
+<li><strong>C++</strong>标准中规定，无论在哪种平台上，都把<strong>一个char 类型值的存储空间尺寸作为存储空间分配的最小基本单位</strong>（记做1），其他类型值的存储空间分配量都是这个基本单位量的整数倍<ul>
+<li>N could be <strong>char, short, int, long, or long long</strong><img src="images/image-20210319191447838.png" alt="image-20210319191447838"></li>
+<li>It’s extremely unwise to <strong>assume that the size of an int is the same as the size of a pointer</strong></li>
+<li>It’s not guaranteed that <strong>sizeof(long)&lt;sizeof(long long) or that sizeof(double)&lt;sizeof(long double)</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="Void"><a href="#Void" class="headerlink" title="Void"></a>Void</h3><ul>
+<li><p>值集：$\varnothing$</p>
+</li>
+<li><p>一般只用来表示<strong>不返回值的函数</strong>，以及构造出<strong>通用指针类型（void*）</strong>，来指向类型不限或者类型不可预知的对象</p>
+<pre class=" language-c++"><code class="language-c++">void qsort(void* base,size_t num,size_t size,int (*compar)(const void*,const void*))</code></pre>
+</li>
+<li><p>some examples:</p>
+<pre class=" language-c++"><code class="language-c++">void x; // error : there are no void objects
+void& r; // error : there are no references to void
+void f(); // function f does not return a value 
+void∗ pv; // pointer to object of unknown type </code></pre>
+</li>
+</ul>
+<h3 id="Enumerations"><a href="#Enumerations" class="headerlink" title="Enumerations"></a>Enumerations</h3><ul>
+<li>值集中的每个值：一个已<strong>命名的整数常量（Named integer constant）</strong>，该名字就是该枚举类型的一个字面值（enumerator，枚举符）</li>
+<li><img src="images/image-20210319192026595.png" alt="image-20210319192026595"></li>
+<li><img src="images/image-20210319193536313.png" alt="image-20210319193536313"></li>
+</ul>
+<h3 id="Declarations"><a href="#Declarations" class="headerlink" title="Declarations"></a>Declarations</h3><ul>
+<li><p><strong>Before a name (identifier) can be used in a C++ program, it must be declared. That is, its type must be specified to inform the compiler what kind of entity the name refers to</strong>.</p>
+</li>
+<li><p>for examples:</p>
+<pre class=" language-c++"><code class="language-c++">char ch;
+string s;
+auto count = 1;
+const double pi {3.1415926535897};
+extern int error_number;
+const char∗ name = "Njal";
+const char∗ season[] = { "spring", "summer", "fall", "winter" };
+vector<string> people { name, "Skarphedin", "Gunnar" };
+struct Date { int d, m, y; };
+int day(Date∗ p) { return p−>d; }
+double sqrt(double);
+template<class T> T abs(T a) { return a<0 ? −a : a; }
+constexpr int fac(int n) { return (n<2)?1:n∗fac(n−1); } // possible compile-time evaluation (§2.2.3)
+constexpr double zz { ii∗fac(7) }; // compile-time initialization
+using Cmplx = std::complex<double>; // type alias (§3.4.5, §6.5)
+struct User; // type name
+enum class Beer { Carlsberg, Tuborg, Thor };
+namespace NS { int a; }</code></pre>
+<ul>
+<li>A declarations consists of four parts: <strong>an optional specifier, a base type, a declarator, an optional initializer</strong><img src="images/image-20210319194257507.png" alt="image-20210319194257507"></li>
+</ul>
+</li>
+<li><p>What’s the difference between declaration and definition?</p>
+<ul>
+<li><pre class=" language-c++"><code class="language-c++">char ch; // set aside memory for a char and initialize it to 0
+auto count = 1; // set aside memory for an int initialized to 1
+const char∗ name = "Njal"; // set aside memory for a pointer to char
+// set aside memory for a string literal "Njal"
+// initialize the pointer with the address of that string literal
+struct Date { int d, m, y; }; // Date is a struct with three members
+int day(Date∗ p) { return p−>d; } // day is a function that executes the specified code
+using Point = std::complex<shor t>;// Point is a name for std::complex<shor t</code></pre>
+</li>
+<li><p>only these are not definitions:</p>
+<pre class=" language-c++"><code class="language-c++">double sqrt(double); // function declaration
+extern int error_number; // variable declaration
+struct User; // type name declaration</code></pre>
+</li>
+<li><p><strong>A definition is a declaration that supplies all that is needed in a program for the use of an entity.</strong></p>
+</li>
+<li><p>more examples:</p>
+<pre class=" language-c++"><code class="language-c++">int count;
+int count;//error redifinition
+
+extern int error_number;
+extern short error_number;//error:type mismatch
+
+extern int error_number;
+extern int error_number;//OK：redeclaration</code></pre>
+</li>
+<li><p>对于变量（对象）声明，若<strong>没有描述符extern</strong>，或它<strong>带有初始式</strong>，则为定义，否则仅为非定义声明</p>
+</li>
+<li><p>对于函数声明，若带有函数体，则为定义，否则仅为非定义声明</p>
+</li>
+<li><p>一个enum, struct, union, class, 若带有其所有成员的声明，那么它就是一个定义，否则仅为非定义声明</p>
+</li>
+<li><p>名字空间（namespace）只有定义声明，而没有非定义声明的形式</p>
+<pre class=" language-c++"><code class="language-c++">namespace  N  {//定义
+         int  x, y;//成员可以是定义声明，
+            int  f();//也可以是非定义声明
+  }//N的其他成员可能在别的地方声明
+</code></pre>
+</li>
+<li><p><img src="images/image-20210319200543101.png" alt="image-20210319200543101"></p>
+</li>
+<li><p>Except for function and namespace definitions, a declaration is terminated by a semicolon<img src="images/image-20210319200728160.png" alt="image-20210319200728160"></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Names"><a href="#Names" class="headerlink" title="Names"></a>Names</h3><ul>
+<li>Definition from the book: <strong>A name (identifier) consists of a sequence of letters and digits</strong>. <strong>The first character must be a letter</strong>. The <strong>underscore character, _, is considered a letter</strong>. C++ imposes <strong>no limit on the number of characters in a name</strong>. However, some parts of an implementation are not under the control of the compiler writer (in particular, the linker), and those parts, unfortunately, sometimes do impose limits. Some run-time environments also make it necessary to extend or restrict the set of characters accepted in an identifier. Extensions (e.g., allowing the character $ in a name) yield nonportable programs. A C++ keyword (§6.3.3.1), such as <strong>new</strong> or <strong>int,</strong> c<strong>annot be used as a name of a user-defined entity.</strong> </li>
+<li>Examples of names are:<img src="images/image-20210319201801236.png" alt="image-20210319201801236"></li>
+<li>Examples of wrong names:<img src="images/image-20210319201857843.png" alt="image-20210319201857843"></li>
+</ul>
+<h3 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope</h3><ul>
+<li><p>The scope of <strong>a global name</strong> (declared outside any function, class, or namespace<em>)</em> extends from <strong>its point of declaration to the end of the file</strong> in which its declaration occurs.</p>
+</li>
+<li><p>The scope of <strong>a local name</strong> (declared in a <em>block</em>, function, class, namespace) extends from <strong>its point of declaration to the end of the block</strong> in which its declaration occurs.</p>
+</li>
+<li><p>A declaration of <strong>a name in a <em>inner block</em> can hide a declaration in an <em>enclosing block</em> or a global name;</strong> After exit from the block, the hidden name resumes its previous meaning</p>
+<pre class=" language-c++"><code class="language-c++">int x; // global x
+void f()
+{
+int x; // local x hides global x
+x = 1; // assign to local x
+{
+int x; // hides first local x
+x = 2; // assign to second local x
+}
+x = 3; // assign to first local x
+}
+int∗ p = &x; // take address of global x</code></pre>
+</li>
+</ul>
+<ul>
+<li><p>A hidden global name can be referred to <strong>using the scope resolution operator :: (作用域解析符)</strong>. There is no way to use a hidden local name</p>
+<pre class=" language-c++"><code class="language-c++">int x;
+void f2()
+{
+int x = 1; // hide global x
+::x = 2; // assign to global x
+x = 2; // assign to local x
+// ...
+}</code></pre>
+</li>
+</ul>
+<h3 id="Typedef"><a href="#Typedef" class="headerlink" title="Typedef"></a>Typedef</h3><ul>
+<li><p>A declaration prefixed by the keyword <strong>typedef</strong> declares a new name for the type</p>
+</li>
+<li><p>•The <em>typedef</em> is a synonym（<strong>同义词</strong>） for other type rather than <u>a distinct type</u>. </p>
+</li>
+<li><p>for example</p>
+<pre class=" language-c++"><code class="language-c++">//if you wanna get two pointers to char
+char* p1,p2;//ERROR:p1 is char*,p2 si char
+
+typedef char* P2char;
+P2char p1,p2;//p1 and p2 are char*
+</code></pre>
+</li>
+</ul>
+<h2 id="Pointers-Arrays-and-Structures"><a href="#Pointers-Arrays-and-Structures" class="headerlink" title="Pointers, Arrays, and Structures"></a>Pointers, Arrays, and Structures</h2><ul>
+<li>程序运行时的内存-概念模型<img src="images/image-20210319211149228.png" alt="image-20210319211149228"></li>
+</ul>
+<h3 id="Pointers"><a href="#Pointers" class="headerlink" title="Pointers"></a>Pointers</h3><ul>
+<li><p>For a type T, T∗ is the type ‘‘pointer to T.’’ That is, a variable of type T∗ can <strong>hold the address of an object of type T</strong></p>
+<ul>
+<li><p>for examples:</p>
+<pre class=" language-c++"><code class="language-c++">char c = 'a';
+char∗ p = &c;//p holds the address of c; & is the address-of operator</code></pre>
+</li>
+<li><p>graphically: </p>
+<p><img src="images/image-20210319212212684.png" alt="image-20210319212212684"></p>
+</li>
+</ul>
+</li>
+<li><p>‘*’:  dereference operator</p>
+</li>
+<li><p>‘&amp;’: address-of operator</p>
+</li>
+<li><p>more examples:</p>
+<pre class=" language-c++"><code class="language-c++">nt∗ pi; // pointer to int
+char∗∗ ppc; // pointer to pointer to char
+int∗ ap[15]; // array of 15 pointers to ints
+int (∗fp)(char∗); // pointer to function taking a char* argument; returns an int
+int∗ f(char∗); // function taking a char* argument; returns a pointer to int
+
+//*和&是一对互逆操作,下面两个例子都成立
+*(&c)=c
+&(*p)=p</code></pre>
+</li>
+<li><p>Pointer to Function</p>
+<blockquote>
+<p>There are ONLY two things one can do to a function: <em>call it</em> and <strong>take its address</strong></p>
+</blockquote>
+<ul>
+<li><img src="images/image-20210319213324399.png" alt="image-20210319213324399"></li>
+<li><img src="images/image-20210319213345642.png" alt="image-20210319213345642"></li>
+<li><img src="images/image-20210319213415381.png" alt="image-20210319213415381"></li>
+</ul>
+</li>
+<li><p>about nullptr</p>
+<ul>
+<li><p>The literal nullptr represents the null pointer, that is, <strong>a pointer that does not point to an object</strong>. It can be assigned to any pointer type, but <strong>not to other built-in types:</strong></p>
+<pre class=" language-c++"><code class="language-c++">int∗ pi = nullptr;
+double∗ pd = nullptr;
+int i = nullptr; // error : i is not a pointer</code></pre>
+</li>
+<li><p>Before nullptr was introduced, zero (0) was used as a notation for the null pointer</p>
+<pre class=" language-c++"><code class="language-c++">int∗ x = 0; // x gets the value nullptr</code></pre>
+</li>
+<li><p>It has been popular to define a macro NULL to represent the null pointer.</p>
+<pre class=" language-c++"><code class="language-c++">int∗ p = NULL; // using the macro NULL</code></pre>
+</li>
+<li><p>However, there are differences in the definition of NULL in different implementations; for example, <strong>NULL might be 0 or 0L</strong>. I<u>n C, NULL is typically (void∗)0</u>, which makes it illegal in C++</p>
+<pre class=" language-c++"><code class="language-c++">int∗ p = NULL; // error : can’t assign a void* to an int*</code></pre>
+</li>
+<li><p>But most of C++ compilers have inherited the use of   macro NULL, so it’s fine if you wanna use it</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Arrays"><a href="#Arrays" class="headerlink" title="Arrays"></a>Arrays</h3><ul>
+<li><p>For a type T, T[size] is the type ‘‘array of size elements of type T.’’ The elements are indexed from 0 to size−1</p>
+</li>
+<li><p>for examples: (<strong>T can’t be void, but void* is fine</strong>)</p>
+<pre class=" language-c++"><code class="language-c++">float v[3]; // an array of three floats: v[0], v[1], v[2]
+char∗ a[32]; // an array of 32 pointers to char: a[0] .. a[31]</code></pre>
+</li>
+<li><p>The number of elements of the array, the array bound, must be <strong>a constant expression</strong></p>
+<pre class=" language-c++"><code class="language-c++">void f(int n)
+{
+int v1[n]; // error : array size not a constant expression
+vector<int> v2(n); // OK: vector with n int elements
+}</code></pre>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -488,7 +821,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://MrGGLS.github.io/2020/02/17/hello-world/">https://MrGGLS.github.io/2020/02/17/hello-world/</a>
+                    <a href="https://MrGGLS.github.io/2021/03/19/c-programming/">https://MrGGLS.github.io/2021/03/19/c-programming/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -694,7 +1027,7 @@
         repo: '',
         owner: '',
         admin: null,
-        id: '2020-02-17T14-53-43',
+        id: '2021-03-19T21-57-10',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -717,7 +1050,7 @@
 <script src="/libs/gitment/gitment.js"></script>
 <script>
 var gitment = new Gitment({
-    id: 'Mon Feb 17 2020 14:53:43 GMT+0800',
+    id: 'Fri Mar 19 2021 21:57:10 GMT+0800',
     owner: '',
     repo: '',
     oauth: {
@@ -741,9 +1074,9 @@ gitment.render('gitment-content');
 
 <script type="text/javascript">
     disqus_config = function () {
-        this.page.url = 'https://MrGGLS.github.io/2020/02/17/hello-world/';
-        this.page.identifier = '/2020/02/17/hello-world/';
-        this.page.title = 'Hello World';
+        this.page.url = 'https://MrGGLS.github.io/2021/03/19/c-programming/';
+        this.page.identifier = '/2021/03/19/c-programming/';
+        this.page.title = 'C++ Programming';
     };
     let disqus_shortname = '';
 
@@ -1051,69 +1384,30 @@ gitment.render('gitment-content');
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
-                <a href="/2020/02/17/myfirstpost/">
+                <a href="/2021/03/19/c-programming/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="How Are You Doing?">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="C++ Programming">
                         
-                        <span class="card-title">How Are You Doing?</span>
+                        <span class="card-title">C++ Programming</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            This is my first blog, but I dont wanna say anything. I'm a very very cold man.
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/02/17/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex
+                            C++ ProgrammingTypes
+Every name (identifier) in a C++ program has a type associated with it. This type determines what o
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-02-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-19
                             </span>
                         <span class="publish-author">
                             
@@ -1124,6 +1418,55 @@ gitment.render('gitment-content');
                     </div>
                 </div>
 
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/06/24/jiu-lian-huan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="Chinese Ring Puzzle">
+                        
+                        <span class="card-title">Chinese Ring Puzzle</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Chinese ring puzzle is one kind of complex game and quite difficult to understand, I spent one more hours in solving this issue, and I also made a program which might have some help for you.
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-24
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Recursion/" class="post-category">
+                                    Recursion
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
